@@ -10,6 +10,10 @@ const app = express();
 
 // Connect to MongoDB using Mongoose
 mongoose.connect(`${process.env.MONGODB_API_KEY}`);
+const corsOptions = {
+    origin: "https://todoapp2day.netlify.app/", // Replace with your Netlify app URL
+    optionsSuccessStatus: 200,
+  };
 
 // Enable CORS for cross-origin requests
 // CORS is required when a client (e.g., frontend) and server are on different origins/domains.
