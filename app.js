@@ -9,7 +9,7 @@ require('dotenv').config(); // Load environment variables from .env file
 const app = express();
 
 // Connect to MongoDB using Mongoose
-mongoose.connect(`${process.env.MONGODB_API_KEY}`);
+mongoose.connect(`mongodb+srv://${process.env.MONGODB_API_KEY}@todoapp.f653k.mongodb.net/`);
 const corsOptions = {
     origin: "https://todoapp2day.netlify.app/", // Replace with your Netlify app URL
     optionsSuccessStatus: 200,
